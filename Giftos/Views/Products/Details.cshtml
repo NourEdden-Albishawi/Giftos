@@ -1,0 +1,36 @@
+﻿@model Giftos.Entities.Product
+@{
+    ViewData["Title"] = "Details";
+}
+
+<form asp-action="Details">
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Product Image -->
+            <div class="col-md-6">
+                @if (Model.Image != null)
+                {
+                    <img alt="Product Image" src="data:image/*;base64,@(Convert.ToBase64String(Model.Image))" class="img-fluid" alt="Product Image">
+                }
+                else
+                {
+                    <img src="~/images/no-picture.jpg" alt="Product Picture" />
+                }
+            </div>
+            <!-- Product Details -->
+            <div class="col-md-6 mb-2">
+                <h1 class="display-4">@Html.DisplayFor(model => model.Name)</h1>
+                <p class="lead">@Html.DisplayFor(model => model.Description)</p>
+                <h3 class="text-success">$@Html.DisplayFor(model => model.Price)</h3>
+                <p><strong>Stock:</strong> <span id="productStock">@Html.DisplayFor(model => model.Stock)</span> units available</p>
+                <div class="buttons-container">
+                    <button class="btn btn-info btn-lg mb-2">Add to Cart</button>
+                    <a asp-action="Index" class="btn btn-outline-info btn-lg mb-2">Back to List</a>
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary btn-sm mb-2">Edit Product</a>
+                    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger btn-sm mb-2">Delete Product</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

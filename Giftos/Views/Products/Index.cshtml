@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Giftos.Entities.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<p>
+    <a asp-action="Create" class="btn btn-success">Add New Product</a>
+</p>
+<section class="shop_section layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>
+                Latest Products
+            </h2>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-6 col-md-4 col-lg-3">
+
+                    <div class="box">
+                        <a asp-action="Details" asp-route-id="@item.Id">
+                            <div class="img-box">
+                                @if (item.Image != null)
+                                {
+                                    <img src="data:image/*;base64,@(Convert.ToBase64String(item.Image))" alt="Product Picture">
+                                }
+                                else
+                                {
+                                    <img src="~/images/no-picture.jpg" alt="Product Picture" />
+                                }
+                            </div>
+                            <div class="detail-box">
+                                <h6>
+                                    @Html.DisplayFor(modelItem => item.Name)
+                                </h6>
+                                <h6>
+                                    Price
+                                    <span>
+                                        $@Html.DisplayFor(modelItem => item.Price)
+                                    </span>
+                                </h6>
+                            </div>
+                            <div class="new">
+                                <span>
+                                    New
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="btn-box">
+            <a href="@Url.Action("Index", "Products")">
+                View All Products
+            </a>
+        </div>
+    </div>
+</section>
