@@ -1,15 +1,14 @@
-# eCommerce Shop
+# Giftos
 
 ## Overview
 
-Welcome to the eCommerce Shop, an ASP.NET-based web application designed to provide a seamless online shopping experience. This project leverages the power of the ASP.NET framework along with the Identity Framework to ensure robust and secure authentication for users.
+Welcome to the eCommerce Shop, an ASP.NET-based web application designed to provide a seamless online shopping experience. This project leverages the power of the ASP.NET framework along with the Identity Framework to ensure robust and secure authentication for users. I created this project to practice and improve my ASP.NET skills.
 
 ## Features
 
 - **User Authentication:** Secure user registration and login using ASP.NET Identity Framework.
 - **Product Management:** Comprehensive CRUD (Create, Read, Update, Delete) functionality for managing products.
 - **Image Upload:** Easy upload and preview of product images.
-- **Shopping Cart:** Add products to the cart and proceed to checkout.
 - **Responsive Design:** Fully responsive design using Bootstrap to ensure compatibility across all devices.
 - **Account Management:** Manage user profiles, including updating personal information and profile pictures.
 
@@ -51,8 +50,6 @@ Welcome to the eCommerce Shop, an ASP.NET-based web application designed to prov
 1. **Register a new account:** Navigate to the register page and create a new account.
 2. **Login:** Use your credentials to log in.
 3. **Manage Products:** As an authenticated user, you can create, edit, and delete products.
-4. **Add to Cart:** Browse products and add them to your shopping cart.
-5. **Checkout:** Proceed to checkout to complete your purchase.
 
 ## Contributing
 
@@ -61,3 +58,7 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- Frontend template taken from [Free HTML Templates](https://html.design/)
